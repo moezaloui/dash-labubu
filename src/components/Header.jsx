@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { LogOut, Menu } from 'lucide-react';
 
 function Header({ toggleSidebar }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear(); // ✅ Supprimer tout du localStorage
+    navigate('/');        // ✅ Rediriger vers la page de connexion
+  };
   return (
     <header className="flex justify-between items-center px-6 py-4 bg-white border-b border-gray-200 shadow-sm">
       <div className="flex items-center gap-4">
@@ -21,8 +27,8 @@ function Header({ toggleSidebar }) {
         </p>
       </div>
 
-      <button className="bg-black text-white font-bold py-2 px-4 rounded-full">
-        Logout
+      <button onClick={()=>{handleLogout()}} className="font-bold py-2 px-4 rounded-full">
+        <LogOut color="#4571a1" />
       </button>
     </header>
   );
