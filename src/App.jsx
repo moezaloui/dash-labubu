@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import AddItems from "./pages/Additems";
 import Articles from "./pages/Articles";
 import Orders from "./pages/Orders";
 import "./App.css";
