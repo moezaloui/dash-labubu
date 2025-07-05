@@ -15,7 +15,7 @@ function ListItems() {
 
   const fetchArticles = () => {
     setLoading(true);
-    fetch("https://server-salem.vercel.app/api/products")
+    fetch("https://server-salem.onrender.com/api/products")
       .then((res) => res.ok ? res.json() : Promise.reject("Erreur de récupération"))
       .then(setItems)
       .catch((err) => setError(err.toString()))

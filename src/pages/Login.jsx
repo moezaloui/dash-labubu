@@ -23,7 +23,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "https://server-salem.vercel.app/api/user/login",
+        "https://server-salem.onrender.com/api/user/login",
         formData
       );
 

@@ -27,7 +27,7 @@ function Orders() {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get("https://server-salem.vercel.app/api/orders");
+      const res = await axios.get("https://server-salem.onrender.com/api/orders");
       setOrders(res.data);
     } catch (err) {
       setError("Erreur chargement commandes.");
@@ -47,7 +47,7 @@ function Orders() {
     setStatusUpdatingId(orderId);
     setError(null);
     try {
-      await axios.put(`https://server-salem.vercel.app/api/orders/${orderId}/status`, {
+      await axios.put(`https://server-salem.onrender.com/api/orders/${orderId}/status`, {
         status: statusToSend,
       });
       // Re-fetch data après succès update

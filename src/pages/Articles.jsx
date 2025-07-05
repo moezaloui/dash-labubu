@@ -16,7 +16,7 @@ function Articles() {
 
   const fetchArticles = () => {
     setLoading(true);
-    fetch("https://server-salem.vercel.app/api/products")
+    fetch("https://server-salem.onrender.com/api/products")
       .then((res) => res.ok ? res.json() : Promise.reject("Erreur de récupération"))
       .then(setItems)
       .catch((err) => setError(err.toString()))
@@ -33,7 +33,7 @@ function Articles() {
   }, [toast]);
 
   const handleDelete = () => {
-    fetch(`https://server-salem.vercel.app/api/products/${deleteId}`, {
+    fetch(`https://server-salem.onrender.com/api/products/${deleteId}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -53,7 +53,7 @@ function Articles() {
   };
 
   const handleEditSubmit = () => {
-    fetch(`https://server-salem.vercel.app/api/products/${modal.item._id}`, {
+    fetch(`https://server-salem.onrender.com/api/products/${modal.item._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(modal.item),

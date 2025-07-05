@@ -45,7 +45,7 @@ const AddItems = () => {
     uploadedImages.forEach(img => img && formData.append('images', img));
 
     try {
-      const res = await axios.post('https://server-salem.vercel.app/api/products', formData, {
+      const res = await axios.post('https://server-salem.onrender.com/api/products', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert('Produit ajouté avec succès ✅');

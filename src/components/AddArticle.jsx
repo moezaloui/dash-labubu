@@ -44,7 +44,7 @@ function AddArticle() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://server-salem.vercel.app/api/products", {
+    fetch("https://server-salem.onrender.com/api/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
